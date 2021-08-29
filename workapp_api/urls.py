@@ -7,7 +7,7 @@ router = routers.DefaultRouter()
 router.register('items', ItemViewSet, basename = 'items')
 
 urlpatterns = [
-    path('item-list', ItemListView.as_view(), name='item-list'),
+    path('item-list/', ItemListView.as_view(), name='item-list'),
     path('item-list/<str:pk>/', ItemRetrieveView.as_view(), name = 'detail-item'),
     path('register/', CreateUserView.as_view(), name = 'register'),
     path('auth/', include('djoser.urls.jwt')),

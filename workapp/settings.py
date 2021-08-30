@@ -31,7 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = [
-    'worksapp-backend.herokuapp.com'
+    'worksapp-backend.herokuapp.com',
 ]
 
 
@@ -76,7 +76,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated', #認証が通ったUserのみviewにアクセスできる設定
     ],
     #認証方法の設定→JWTを用いた認証を設定
-    'DEFAULT_AUTHENTIVATION_CLASSES': [
+    'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
